@@ -13,9 +13,6 @@ To set up MintyCoin, follow these steps:
 3. Customize the configuration in the `.env` file, if necessary.
 4. Open a terminal or command prompt and navigate to the directory containing the files.
 5. Run the following command to start MintyCoin: 'docker-compose up -d'
-6. Access the MintyCoin web dashboard by visiting `http://localhost` in your web browser.
-
-For more detailed instructions and configuration options, please refer to the [documentation](docs/guide.md).
 
 ## Support Links 🎁
 
