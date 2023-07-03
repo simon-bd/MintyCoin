@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/simon-bd/MintyCoin/blob/main/.assets/mintycoin.png" alt="MintyCoin Logo" width="200px" />
+  <img src="https://github.com/simon-bd/MintyCoin/blob/main/.assets/mintycoin.png" alt="MintyCoin Logo" width="250px" />
 </p>
 
 ---
