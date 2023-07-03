@@ -51,10 +51,8 @@ We would like to express our gratitude to the developers and contributors of the
 
 ## Contact 📧
 
-If you have any questions, suggestions, or feedback, please reach out to us at mintycoin@example.com.
+If you have any questions, suggestions, or feedback, please reach out to us here on github.
 
 Happy earning with MintyCoin! 🎉💰
 
-
-Happy earning with MintyCoin! 🎉💰
 
