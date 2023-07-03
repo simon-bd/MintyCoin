@@ -17,8 +17,6 @@ To set up MintyCoin, follow these steps:
 
 For more detailed instructions and configuration options, please refer to the [documentation](docs/guide.md).
 
-## Referral Links 🎁
-
 ## Support Links 🎁
 
 Help support this repository by using the following support links:
