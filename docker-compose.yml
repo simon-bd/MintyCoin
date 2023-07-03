@@ -1,0 +1,117 @@
+version: '3.5'
+
+services:
+
+  # Start of Earnapp section (remove this if Earnapp not wanted)
+  Earnapp:
+    image: fazalfarhan01/earnapp:lite
+    volumes:
+      - earnapp-data:/etc/earnapp
+    restart: always
+    environment:
+      - EARNAPP_UUID=$EARNAPP_DEVICE_ID
+    networks:
+      default:
+        ipv4_address: 172.106.0.20
+
+  # Start of HoneyGain section (remove this if HoneyGain not wanted)
+  Honeygain:
+    image: honeygain/honeygain
+    command: -tou-accept -email $HONEYGAIN_EMAIL -pass '$HONEYGAIN_PASSWD' -device $DEVICE_NAME
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.106.0.30
+
+  # Start of IproyalPawns section (remove this if IproyalPawns not wanted)
+  IproyalPawns:
+    image: iproyal/pawns-cli:latest
+    command: -email=$IPROYALPAWNS_EMAIL -password='$IPROYALPAWNS_PASSWD' -device-name=$DEVICE_NAME -accept-tos
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.106.0.40
+
+  # Start of Peer2profit section (remove this if Peer2profit not wanted)
+  Peer2profit:
+    image: peer2profit/peer2profit_linux:latest
+    restart: always
+    environment:
+      - P2P_EMAIL=$PEER2PROFIT_EMAIL
+    networks:
+      default:
+        ipv4_address: 172.106.0.50
+
+  # Start of Packetstream section (remove this if Packetstream not wanted)
+  Packetstream_PsClient:
+    image: packetstream/psclient:latest
+    restart: always
+    environment:
+      - CID=$PACKETSTREAM_CID
+    networks:
+      default:
+        ipv4_address: 172.106.0.60
+
+  Packetstream_Watchtower:
+    depends_on:
+      - Packetstream_PsClient
+    image: containrrr/watchtower
+    command: --cleanup --include-stopped --revive-stopped --interval 60 ${_COMPOSE_PROJECT_NAME}_Packetstream_PsClient_${_COMPOSE_PROJECT_STACK_ID}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    networks:
+      default:
+        ipv4_address: 172.106.0.61
+
+  # Start of Bitping section (remove this if Bitping not wanted)
+  Bitping:
+    image: bitping/bitping-node:latest
+    restart: always
+    volumes:
+      - ./data/bitping:/root/.bitping
+    networks:
+      default:
+        ipv4_address: 172.106.0.70
+
+  # Start of TraffMonetizer section (remove this if TraffMonetizer not wanted)
+  TraffMonetizer:
+    image: traffmonetizer/cli:latest
+    restart: always
+    command: start accept --token ${TRAFFMONETIZER_TOKEN}
+    networks:
+      default:
+        ipv4_address: 172.106.0.80
+
+  # Start of Repocket section (remove this if Repocket not wanted)
+  Repocket:
+    image: repocket/repocket:latest
+    restart: always
+    environment:
+      - RP_EMAIL
+      - RP_API_KEY
+    networks:
+      default:
+        ipv4_address: 172.106.0.90
+
+  # Start of Proxyrack section (remove this if Proxyrack not wanted)
+  Proxyrack:
+    image: proxyrack/pop:latest
+    restart: always
+    environment:
+      - api_key=$PROXYRACK_API_KEY
+      - device_name=$DEVICE_NAME
+    networks:
+      default:
+        ipv4_address: 172.106.0.110
+
+volumes:
+  earnapp-data:
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.106.0.0/16
