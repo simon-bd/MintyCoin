@@ -13,11 +13,29 @@ To set up MintyCoin, follow these steps:
 3. Customize the configuration in the `.env` file, if necessary.
 4. Open a terminal or command prompt and navigate to the directory containing the files.
 5. Run the following command to start MintyCoin: 'docker-compose up -d'
-
-
 6. Access the MintyCoin web dashboard by visiting `http://localhost` in your web browser.
 
 For more detailed instructions and configuration options, please refer to the [documentation](docs/guide.md).
+
+## Referral Links 🎁
+
+## Support Links 🎁
+
+Help support this repository by using the following support links:
+
+| Platform                  | Support Link                                                                 |
+|---------------------------|------------------------------------------------------------------------------|
+| EarnApp                   | [Link](https://earnapp.com/i/4WCcCtLS)                                       |
+| Honeygain                 | [Link](https://r.honeygain.me/SIMON3255C)                                    |
+| Peer2Profit               | [Link](https://t.me/peer2profit_app_bot?start=167224820663ac7b8eeb925)       |
+| IPRoyal Pawns             | [Link](https://pawns.app/?r=1143404)                                          |
+| PacketStream              | [Link](https://packetstream.io/?psr=4fu3)                                     |
+| Repocket                  | [Link](https://link.repocket.co/HrX9)                                         |
+| Bitping                   | [Link](https://app.bitping.com?r=RUxYI64R)                                    |
+| Proxyrack                 | [Link](https://peer.proxyrack.com/ref/ij5y5polmrswmatuyh0dyxaiosti1vsg8plwrzkt)|
+| TraffMonetizer            | [Link](https://traffmonetizer.com/?aff=886183)                                |
+
+Thank you for supporting this repository by using these support links!
 
 ## Contributing 🤝
 
@@ -39,6 +57,9 @@ We would like to express our gratitude to the developers and contributors of the
 ## Contact 📧
 
 If you have any questions, suggestions, or feedback, please reach out to us at mintycoin@example.com.
+
+Happy earning with MintyCoin! 🎉💰
+
 
 Happy earning with MintyCoin! 🎉💰
 
