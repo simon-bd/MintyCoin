@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://example.com/path/to/image.png" alt="MintyCoin Logo" width="200px" />
+</p>
+
+---
+
+
 # MintyCoin 💰
 
 Monetize Your Spare Internet Bandwidth Effortlessly 🌐💸
