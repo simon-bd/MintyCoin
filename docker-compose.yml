@@ -76,7 +76,7 @@ services:
 
   # Start of TraffMonetizer section (remove this if TraffMonetizer not wanted)
   TraffMonetizer:
-    image: traffmonetizer/cli:latest
+    image: traffmonetizer/cli_v2:latest
     restart: always
     command: start accept --token ${TRAFFMONETIZER_TOKEN}
     networks:
